@@ -9,6 +9,15 @@ class Employee(Person):
     --work_mood = ""
     __salary = 0
     __is_manager = False
+    __office_id = 0
+
+    @property
+    def office_id(self):
+        return self.office_id
+
+    @office_id.setter
+    def office_id(self, value):
+        self.office_id = value
 
     @property
     def id(self):
@@ -48,6 +57,14 @@ class Employee(Person):
             self.salary = value
         else:
             print("salary must be at least 1000")
+
+    @property
+    def is_manager(self):
+        return self.is_manager
+
+    @is_manager.setter
+    def is_manager(self, value):
+        self.is_manager = value
 
 
 @property

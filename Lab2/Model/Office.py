@@ -1,10 +1,16 @@
 class Office:
     __name = ""
+    __id = 0
     __employees = []
 
-    def __init__(self, name, employees):
+    def __init__(self, office_id, name, employees):
+        self.__id = office_id
         self.__name = name
         self.__employees = employees
+
+    @property
+    def id(self):
+        return self.__id
 
     @property
     def name(self):
