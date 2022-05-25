@@ -35,6 +35,8 @@ class OfficeService:
         __cursor.execute(
             f"update offices set name = {office.name} where id =  {office.id}"
         )
+        result = self.__db.commit()
+        return result
 
     def remove_office(self, office_id):
         __cursor = self.__db.cursor()
@@ -49,3 +51,5 @@ class OfficeService:
         __cursor.execute(
             f"select * from employees e inner join offices o on e.office_id = o.id where office_id = {office_id}"
         )
+        result = self.__cursor.fetchall()
+        return result
