@@ -9,8 +9,6 @@ class DatabaseConnection:
         database="python_demo"
     )
 
-    __cursor = __db.cursor()
-
     @property
-    def cursor(self):
-        self.__cursor
+    def db(self):
+        return DatabaseConnection.__db

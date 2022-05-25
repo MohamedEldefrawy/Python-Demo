@@ -3,10 +3,8 @@ class Office:
     __id = 0
     __employees = []
 
-    def __init__(self, office_id, name, employees):
-        self.__id = office_id
+    def __init__(self, name):
         self.__name = name
-        self.__employees = employees
 
     @property
     def id(self):
@@ -14,19 +12,19 @@ class Office:
 
     @property
     def name(self):
-        return self.name
+        return self.__name
 
     @name.setter
     def name(self, value):
-        self.name = value
+        self.__name = value
 
     @property
     def employees(self):
-        return self.employees
+        return self.__employees
 
     @employees.setter
     def employees(self, value):
-        self.employees = value
+        self.__employees = value
 
     def employee(self, employee_id):
         return self.__employees[employee_id]

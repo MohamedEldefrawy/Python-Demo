@@ -4,9 +4,9 @@ from Model.DbConnection import DatabaseConnection
 class EmployeeService:
     __cursor = DatabaseConnection.cursor
 
-    def create_office(self, employee):
+    def create_employee(self, employee):
         self.__cursor.execute(
-            "insert into employees(full_name, money, sleep_mood, heart_rate, work_mood, email, salary, is_manager, office_id) "
+            "insert into employees(full_name, money, sleep_mood, heart_rate, work_mood, email, salary, is_manager, office_id)"
             f"values ({employee.name, employee.money, employee.sleep_mood, employee.health_rate, employee.work_mood, employee.email, employee.salary, employee.is_manager, employee.office_id})"
         )
 
